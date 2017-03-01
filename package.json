@@ -1,0 +1,27 @@
+{
+  "name": "recipe_blog",
+  "version": "1.0.0",
+  "description": "Recipe blog using MEAN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritikasantara/Recipe-blog-using-MEAN-stack.git"
+  },
+  "author": "Ritika Santara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritikasantara/Recipe-blog-using-MEAN-stack/issues"
+  },
+  "homepage": "https://github.com/ritikasantara/Recipe-blog-using-MEAN-stack#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.4",
+    "body-parser": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

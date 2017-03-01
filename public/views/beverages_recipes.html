@@ -1,0 +1,24 @@
+
+<div  class="container container_beverages">
+
+    <div ng-init="getBeveragesRecipes()">
+
+        <div ng-repeat="beveragesRecipe in beveragesRecipes" class="panel panel-default">
+
+            <div class="recipe_title well well-sm">{{ beveragesRecipe.title}}</div>
+
+            <img ng-src="{{ beveragesRecipe.image }}" width="190" height="100"/>
+
+            <div id="post_date_recipe">Posted on <br/> {{ beveragesRecipe.create_date }} </div>
+
+            <div class="ingredients">ingredients</div>
+
+            <div class="recipe_description"> {{ beveragesRecipe.description }} </div>
+
+            <div id="read_recipe"><a href="#!/recipes/details/{{ beveragesRecipe._id }}">Read More.. </a></div>
+
+        </div>   
+
+    </div>
+
+</div>    

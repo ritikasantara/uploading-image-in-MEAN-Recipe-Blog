@@ -1,0 +1,44 @@
+
+ <div  class="container container_snacks">
+
+        <h2 class="well well-sm"> Post Snacks Recipe </h2>
+        
+        <form class="form-horizontal" role="form" ng-submit="addSnacksRecipe()">
+
+            <div class="form-group">
+
+                
+                <div class="col-sm-12"><input type="text" class="form-control" ng-model="snacksRecipe.title" placeholder="  Title"></div>
+            
+            </div>
+
+            <div class="form-group">
+                    
+                
+                <div class="col-sm-12"><input type="text" class="form-control" value="Snacks" ng-model="snacksRecipe.category" placeholder="  Snacks"></div>
+
+            </div>
+
+            <div class="form-group">
+
+                
+                <div class="col-sm-12"><input type="text" class="form-control" id="recipe_image" ng-model="snacksRecipe.image" placeholder="  Image"></div>
+
+            </div>
+
+            <div class="input-group">
+
+                <textarea class="form-control" col="10" rows="10" ng-model="snacksRecipe.description"  placeholder="  Contents"></textarea>
+                <div class="col-sm-12">
+                
+                   <button type="submit" class="btn btn-primary col-sm-12 post_button">POST RECIPE</button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+</div>  
+    
+             

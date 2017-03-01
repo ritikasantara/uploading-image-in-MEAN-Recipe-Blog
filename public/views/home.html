@@ -1,0 +1,386 @@
+
+<div class="sections">
+ 
+      <section class="sect one" id="home">
+
+		 <!--<span class="login_button auth_button">Login</span>
+		 <span class="signup_button auth_button">Sign Up</span>-->
+         <p id="sitename">foodTube</p>
+		 
+
+	  </section>
+
+	  <!-- Maincourse recipes -->
+
+      <section class="sect two" id="maincourse">
+
+		 
+
+		  <p class="title">MAINCOURSE</p>
+		  <div  class="all_recipes_title"><a href="#!/recipes/maincourse">All Maincourse</a></div>
+
+        <!-- Blog posts -->
+
+		
+		  <div class="blogs" ng-init="getMaincourseRecipes()">
+
+			 
+			  <div class="recipes" ng-repeat="maincourseRecipe in maincourseRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ maincourseRecipe.title }}</p>
+
+				   <img ng-src="{{ maincourseRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/> {{ maincourseRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ maincourseRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ maincourseRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+		
+
+		</div>
+			  
+			  
+        
+		<div class="create_recipe"><a href="#!/maincourse_recipes/add">Add Maincourse Recipe</a></div> 
+			 
+	
+	  </section>
+
+
+	<!-- Article -->
+
+	  <article class="post_article" ng-init="getArticles()"> 
+
+		  <div ng-repeat="article in articles | limitTo : 1 : 0">
+
+				<p class="title1_article">{{ article.title }}</p>
+
+				<p class="article_date">Posted on &nbsp;{{ article.create_date }}</p>
+
+
+				<p class="title2_article">{{ article.subtitle }}</p>
+
+				<img ng-src="{{ article.image }}" width="250" height="200"/>   
+
+				<p class="content">
+
+						{{ article.content | limitTo : 350}} <span id="readmore_article"><a href="#!/articles/details/{{ article._id }}">Read More..</a></span>
+		
+		       </p>
+
+		</div>
+
+		<div class="create_article"><a href="#!/articles/add">Add Article</a></div>
+
+	  </article	>  
+
+    <!-- Snacks recipes -->
+
+      <section class="sect three" id="snacks">
+
+		  <div class="blur">
+
+		  <p class="title">SNACKS</p>
+		  <div class="all_recipes_title"><a href="#!/recipes/snacks">All Snacks</a></div>
+
+	    <!-- Blog posts -->
+
+          	<div class="blogs" ng-init="getSnacksRecipes()">
+
+            
+
+			  <div class="recipes" ng-repeat="snacksRecipe in snacksRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ snacksRecipe.title }}</p>
+
+				   <img ng-src="{{ snacksRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/>{{ snacksRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ snacksRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ snacksRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+
+			</div> 
+
+			<div class="create_recipe"><a href="#!/snacks_recipes/add">Add Snacks Recipe</a></div> 
+
+			</div>
+
+	  </section>
+
+
+
+	<!-- Article -->
+
+	  <article class="post_article">
+
+		  <div ng-repeat="article in articles | limitTo : 1 : 1"> 
+
+				<p class="title1_article">{{ article.title }}</p>
+
+				<p class="article_date">Posted on &nbsp;{{ article.create_date }}</p>
+
+
+				<p class="title2_article">{{ article.subtitle }}</p>
+
+				<img ng-src="{{ article.image }}" width="250" height="200"/>   
+
+				<p class="content">{{ article.content | limitTo : 350}} 
+					
+					<span id="readmore_article"><a href="#!/articles/details/{{ article._id }}">Read More..</a></span>
+		
+		       </p>
+
+		 </div>	 
+
+		 <div class="create_article"><a href="#!/articles/add">Add Article</a></div>  
+
+	  </article	> 
+
+	  <!-- Starters recipes -->
+
+      <section class="sect four" id="starter">
+
+		  <p class="title">STARTERS</p>
+		  <div class="all_recipes_title"><a href="#!/recipes/starters">All Starters</a></div>
+
+
+		<!-- Blog posts -->
+           	<div class="blogs" ng-init="getStartersRecipes()">
+
+            
+
+			  <div class="recipes" ng-repeat="startersRecipe in startersRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ startersRecipe.title }}</p>
+
+				   <img ng-src="{{ startersRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/> {{ startersRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ startersRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ startersRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+
+			</div>  
+
+			<div class="create_recipe"><a href="#!/starters_recipes/add">Add Starters Recipe</a></div> 
+          
+	  </section>
+
+<!-- Article -->
+
+	 <article class="post_article">
+
+		  <div ng-repeat="article in articles | limitTo : 1 : 2"> 
+
+				<p class="title1_article">{{ article.title }}</p>
+
+				<p class="article_date">Posted on &nbsp;{{ article.create_date }}</p>
+
+
+				<p class="title2_article">{{ article.subtitle }}</p>
+
+				<img ng-src="{{ article.image }}" width="250" height="200"/>   
+
+				<p class="content">{{ article.content | limitTo : 350 }} 
+					
+					<span id="readmore_article"><a href="#!/articles/details/{{ article._id }}">Read More..</a></span>
+		
+		       </p>
+
+		 </div>	
+
+		 <div class="create_article"><a href="#!/articles/add">Add Article</a></div>   
+
+	  </article	> 
+
+	  <!-- Desserts recipes -->
+
+
+      <section class="sect five" id="desserts">
+		  
+		  <p class="title">DESSERTS</p>
+		  <div class="all_recipes_title"><a href="#!/recipes/desserts">All Desserts</a></div>
+
+
+		<!-- Blog posts -->
+
+            <div class="blogs" ng-init="getDessertsRecipes()">
+
+            
+
+			  <div class="recipes" ng-repeat="dessertsRecipe in dessertsRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ dessertsRecipe.title }}</p>
+
+				   <img ng-src="{{ dessertsRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/> {{ dessertsRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ dessertsRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ dessertsRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+
+			</div>  
+
+			<div class="create_recipe"><a href="#!/desserts_recipes/add">Add Desserts Recipe</a></div> 
+
+	  </section>
+
+
+  <!-- Article -->
+
+<article class="post_article">
+
+		  <div ng-repeat="article in articles | limitTo : 1 : 3"> 
+
+				<p class="title1_article">{{ article.title }}</p>
+
+				<p class="article_date">Posted on &nbsp;{{ article.create_date }}</p>
+
+
+				<p class="title2_article">{{ article.subtitle }}</p>
+
+				<img ng-src="{{ article.image }}" width="250" height="200"/>   
+
+				<p class="content">{{ article.content| limitTo : 350 }} 
+					
+					<span id="readmore_article"><a href="#!/articles/details/{{ article._id }}"">Read More..</a></span>
+		
+		       </p>
+
+		 </div>	   
+
+		 <div class="create_article"><a href="#!/articles/add">Add Article</a></div>
+
+	  </article	> 	
+
+    <!-- Beverages recipes -->
+
+	  <section class="sect six" id="beverages">
+		  
+		  <p class="title">BEVERAGES</p>
+		  <div class="all_recipes_title"><a href="#!/recipes/beverages">All Beverages</a></div>
+
+
+		<!-- Blog posts -->
+
+            <div class="blogs" ng-init="getBeveragesRecipes()">
+
+            
+
+			  <div class="recipes" ng-repeat="beveragesRecipe in beveragesRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ beveragesRecipe.title }}</p>
+
+				   <img ng-src="{{ beveragesRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/> {{ beveragesRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ beveragesRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ beveragesRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+
+			</div>  
+
+		<div class="create_recipe"><a href="#!/beverages_recipes/add">Add Beverages Recipe</a></div> 
+
+	  </section>
+
+
+<!-- Article -->
+
+	  <article class="post_article">
+
+		  <div ng-repeat="article in articles | limitTo : 1 : 4"> 
+
+				<p class="title1_article">{{ article.title }}</p>
+
+				<p class="article_date">Posted on &nbsp;{{ article.create_date }}</p>
+
+
+				<p class="title2_article">{{ article.subtitle }}</p>
+
+				<img ng-src="{{ article.image }}" width="250" height="200"/>   
+
+				<p class="content">{{ article.content | limitTo : 350 }} 
+					
+					<span id="readmore_article"><a href="#!/articles/details/{{ article._id }}">Read More..</a></span>
+		
+		       </p>
+
+		 </div>	 
+
+		 <div class="create_article"><a href="#!/articles/add">Add Article</a></div>  
+
+	  </article	> 
+
+	<!-- Popular recipes -->	
+
+	  <section class="sect seven" id="popular">
+
+		  <p class="title">POPULAR</p>
+		  <div class="all_recipes_title"><a href="#!/recipes/popular">All Popular</a></div>
+
+
+		<!-- Blog posts -->
+
+            <div class="blogs" ng-init="getPopularRecipes()">
+
+            
+
+			  <div class="recipes" ng-repeat="popularRecipe in popularRecipes | limitTo: 4 | orderBy: 'create_date'">
+                  
+                   <p id="recipe_title">{{ popularRecipe.title }}</p>
+
+				   <img ng-src="{{ popularRecipe.image }}" width="190" height="100"/>
+
+				   <div id="post_date">Posted on <br/> {{ popularRecipe.create_date }} </div>
+
+				   <div class="recipe_ingredients">INGREDIENTS</div>
+
+				   <div class="recipe_description"> {{ popularRecipe.description | limitTo : 85 }} </div>
+
+				  <div id="readmore"><a href="#!/recipes/details/{{ popularRecipe._id }}">Read More.. </a></div>
+                   
+
+			  </div>
+
+			</div>  
+
+
+		<div class="create_recipe"><a href="#!/popular_recipes/add">Add Popular Recipe</a></div> 
+
+	  </section>
+
+ </div>
+
+ 

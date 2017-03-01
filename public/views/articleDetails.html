@@ -1,0 +1,20 @@
+<div  class="container container_article_details">
+
+    <div  ng-init="getArticle()" class="panel panel-default post_article">
+
+        <div class="title1_article" well well-sm">{{ article.title }}</div>
+
+        <div class="article_date">Posted on &nbsp;{{ article.create_date }}</div>
+
+        <div class="title2_article">{{ article.subtitle }}</div>
+
+        <img ng-src="{{ article.image }}" width="250" height="200"/>
+
+        <div class="content">{{ article.content }}</div>
+
+        <div class="article_edit"><span class="edit_article"><a href="#!/articles/edit/{{ article._id }}">Edit</a></span> | <span class="delete_article" ng-click="removeArticle(article._id)">Delete</span></div>
+
+
+    </div>
+
+</div>
