@@ -1,4 +1,4 @@
-angular.module('recipeBlog')
+angular.module('recipeBlog', ['fileModelDirective'])
 
 	.controller('HomeController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams){
 
